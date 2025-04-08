@@ -80,6 +80,7 @@ Aşağıdaki çizgi grafiğinde, 1996-1998 yılları arasında her ayın **topla
  ![image](https://github.com/user-attachments/assets/c5ea6cc2-b702-457c-a41a-222d352b1f2f)
 ______________________________
 🧠5. MODEL EĞİTME VE YENİDEN EĞİTME
+
 Bu projede iki farklı hedef değişken üzerinde çalıştık:
 •	Hedef Değişken 1: quantity → Bir regresyon problemi
 •	Hedef Değişken 2: Customer_Type → Bir sınıflandırma problemi
@@ -138,7 +139,9 @@ POST /retrain: Biriktirilen veya anlık gelen veriyi kullanarak modeli yeniden e
 3.	Postman'dan /retrain çağrısı yapılarak biriken verilerle model güncellenir.
 Bu yaklaşım, modelinizin canlı veriden öğrenerek kendini iyileştirmesine olanak tanır.
 ________________________________________
+
 🧪6.  API İstekleri
+
 1. GET /products
 GET : http://127.0.0.1:8000/products 
 Bu endpoint, mevcut ürün listesini JSON formatında döndürür.
@@ -160,16 +163,21 @@ POST : http://127.0.0.1:8000/retrain
 "year": 2025, 
 "TotalRevenue": 85.0, 
 "quantity": 7 } ] }
+
  ![image](https://github.com/user-attachments/assets/8adf4c2e-05a4-421f-95ca-302f04d2e665)
 
 ________________________________________
+
 🧪 7. Postman Dokümantasyonu
+
 Aşağıda Postman Documenter aracılığıyla oluşturulmuş bir API dokümantasyon sayfası mevcuttur. Postman, oluşturulan koleksiyonlardaki uç noktaları (endpoint), istek yapılarını, parametreleri ve örnek yanıtları otomatik olarak güzel bir arayüzle bu linkte sunmaktadır. İlgili linke tıklayarak, uç noktaların tam URL’lerini, HTTP metotlarını, parametre ve header bilgileri görüntülenebilmektedir. 
 https://documenter.getpostman.com/view/41937581/2sB2cVe1xT 
 Aşağıdaki resimde, Postman üzerinden paylaşılan API dokümantasyon sayfasının görünümünü görüyorsunuz. Sol tarafta “My API” başlığı altında tanımlanmış uç noktalar (`/products`, `/predicts`, `/retrain`) listeleniyor. Sağ tarafta ise bu uç noktayla ilgili örnek `cURL` isteği ve potansiyel cevap (response) bölümleri yer alıyor. `Run in Postman` düğmesiyle koleksiyonu doğrudan kendi Postman hesabınıza aktarabilirsiniz. Böylece proje API’sini hızlıca test edebilir, farklı parametrelerle örnek istekler gönderebilirsiniz.
  
 ________________________________________
+
 🧪 8. Test ve Dağıtım
+
 1. API uç noktalarının **Postman** ve **Swagger** üzerinden test edilmesi  
 2. API’ye **örnek talepler** gönderilmesi  
 3. Hata yönetimi ve validasyon (ör. `HTTPException`, `pydantic`)  
@@ -177,7 +185,9 @@ ________________________________________
 ![image](https://github.com/user-attachments/assets/9ccf0c77-d628-45a3-b2b3-3e0a6be40363)
 
 ________________________________________
+
 ⚙️ 9. Nasıl Çalıştırılır?
+
 1.	Projeyi kopyalayın:
 git clone [https://github.comsales_forecasting_api](https://github.com/FatmaBeg/sales-forecasting-api/tree/main/sales_forecasting_api)
 2.	Gerekli kütüphaneleri yükleyin:
@@ -186,7 +196,9 @@ pip install -r requirements.txt
 uvicorn sales:app --reload
 4.	Swagger Arayüzü: http://127.0.0.1:8000/docs 
 ________________________________________
+
 ⚙️ 10. Hata Yönetimi ve Exception Kullanımı
+
 Projede, FastAPI'nin HTTPException sınıfı kullanılarak hata yönetimi sağlanır. Böylece API uç noktalarında bir hata oluştuğunda, kullanıcıya anlamlı ve HTTP standartlarına uygun yanıt döndürülür.
 1.	Prediction Hatası (500)
 	except Exception as e:
