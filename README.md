@@ -188,8 +188,12 @@ ________________________________________
 🧪 7. Postman Dokümantasyonu
 
 Aşağıda Postman Documenter aracılığıyla oluşturulmuş bir API dokümantasyon sayfası mevcuttur. Postman, oluşturulan koleksiyonlardaki uç noktaları (endpoint), istek yapılarını, parametreleri ve örnek yanıtları otomatik olarak güzel bir arayüzle bu linkte sunmaktadır. İlgili linke tıklayarak, uç noktaların tam URL’lerini, HTTP metotlarını, parametre ve header bilgileri görüntülenebilmektedir. 
+
 https://documenter.getpostman.com/view/41937581/2sB2cVe1xT 
+
 Aşağıdaki resimde, Postman üzerinden paylaşılan API dokümantasyon sayfasının görünümünü görüyorsunuz. Sol tarafta “My API” başlığı altında tanımlanmış uç noktalar (`/products`, `/predicts`, `/retrain`) listeleniyor. Sağ tarafta ise bu uç noktayla ilgili örnek `cURL` isteği ve potansiyel cevap (response) bölümleri yer alıyor. `Run in Postman` düğmesiyle koleksiyonu doğrudan kendi Postman hesabınıza aktarabilirsiniz. Böylece proje API’sini hızlıca test edebilir, farklı parametrelerle örnek istekler gönderebilirsiniz.
+
+ ![image](https://github.com/user-attachments/assets/9ccf0c77-d628-45a3-b2b3-3e0a6be40363)
  
 ________________________________________
 
@@ -199,7 +203,6 @@ ________________________________________
 2. API’ye **örnek talepler** gönderilmesi  
 3. Hata yönetimi ve validasyon (ör. `HTTPException`, `pydantic`)  
 4. **`requirements.txt`** ile proje bağımlılıklarının dışa aktarılması
-![image](https://github.com/user-attachments/assets/9ccf0c77-d628-45a3-b2b3-3e0a6be40363)
 
 ________________________________________
 
