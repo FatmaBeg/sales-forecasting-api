@@ -64,10 +64,11 @@ Northwind verilerinin veri tabanından çekilmesinin ardından, ham verinin gene
 
 A.	En Çok Satılan 10 Ürün Grafiği
 Bu grafikte, veri tabanında toplam satış miktarına göre en çok satılan 10 ürün listelenmiştir. Yatay eksende “Toplam Satış Miktarı” (örneğin adet cinsinden), dikey eksende ürün isimleri görünmektedir.
- 
+ ![image](https://github.com/user-attachments/assets/0f19e4b7-2257-409d-b9d1-1f2cc8907a52)
 B.	 Zaman İçerisinde Aylık Satış Miktarı
 Aşağıdaki çizgi grafiğinde, 1996-1998 yılları arasında her ayın **toplam satış miktarı (adet cinsinden) gösterilmektedir. Veriler Northwind veritabanından çekilerek `month` ve `year` kolonlarına göre gruplandırılmıştır.
- ________________________________________
+ ![image](https://github.com/user-attachments/assets/c5ea6cc2-b702-457c-a41a-222d352b1f2f)
+______________________________
 🧠5. MODEL EĞİTME VE YENİDEN EĞİTME
 Bu projede iki farklı hedef değişken üzerinde çalıştık:
 •	Hedef Değişken 1: quantity → Bir regresyon problemi
@@ -95,13 +96,16 @@ Projede 4 model denenmiştir:
 A.	DECİSİON TREE MODELİ
 a)	Customer Type
 Aşağıdaki görsel, “Customer_Type” (müşterilerin yeni mi eski mi olduğunu) sınıflandırmak üzere eğittiğimiz Decision Tree modelinin yapısını temsil eder. Aşağıdaki diyagram, veri setindeki özelliklere göre nasıl dallanma yaptığını ve her düğümde hangi kararı aldığını göstermektedir.
- ![image](https://github.com/user-attachments/assets/0f19e4b7-2257-409d-b9d1-1f2cc8907a52)
+ ![image](https://github.com/user-attachments/assets/b51537be-d48f-4d1d-a104-2e685a57e8bc)
+
 
 b)	Sales Category
 Aşağıdaki görsel, satış kategorisi tahmini için Decision Tree modelimizin yapısını gösterir. Aşağıdaki dallanma, hangi özellik değerlerinin hangi şekilde ayrıştırıldığını göstermektedir.
- 
+![image](https://github.com/user-attachments/assets/c7d18b84-8389-44dc-858e-e00620aaeea1) 
 Sales Category’nin karar ağacı metrikleri aşağıdaki resimde sunulmuştur.
  
+![image](https://github.com/user-attachments/assets/5204bee1-2bc6-46f2-9882-fa6ca5794c92)
+
 
 B.	RANDOM FOREST MODELİ
 a)	Customer Type
@@ -112,7 +116,8 @@ Aşağıdaki görselde:
 3.	‘month’ ve ‘quantity’ ise diğerlerine göre biraz daha düşük önem değerlerine sahip.
 4.	Bu durum, modelin “yıl” bilgisini ve “toplam gelir (totalRevenue)” bilgisini tahmin yaparken güçlü bir sinyal olarak kullandığını göstermektedir.
 
- 
+ ![image](https://github.com/user-attachments/assets/4c5cba00-596a-494e-979d-eb0335bcac22)
+
 
 Bu projede iki aşamalı bir eğitim süreci bulunmaktadır:
 İlk Eğitim: Başlangıçta elimizdeki Northwind veritabanı üzerinden veriler çekilerek bir makine öğrenmesi modeli (DecisionTreeRegressor) eğitilir. Model dosyası (sales_model.pkl) olarak kaydedilir.
@@ -145,7 +150,8 @@ POST : http://127.0.0.1:8000/retrain
 "year": 2025, 
 "TotalRevenue": 85.0, 
 "quantity": 7 } ] }
- 
+ ![image](https://github.com/user-attachments/assets/8adf4c2e-05a4-421f-95ca-302f04d2e665)
+
 ________________________________________
 🧪 7. Postman Dokümantasyonu
 Aşağıda Postman Documenter aracılığıyla oluşturulmuş bir API dokümantasyon sayfası mevcuttur. Postman, oluşturulan koleksiyonlardaki uç noktaları (endpoint), istek yapılarını, parametreleri ve örnek yanıtları otomatik olarak güzel bir arayüzle bu linkte sunmaktadır. İlgili linke tıklayarak, uç noktaların tam URL’lerini, HTTP metotlarını, parametre ve header bilgileri görüntülenebilmektedir. 
@@ -157,7 +163,9 @@ ________________________________________
 1. API uç noktalarının **Postman** ve **Swagger** üzerinden test edilmesi  
 2. API’ye **örnek talepler** gönderilmesi  
 3. Hata yönetimi ve validasyon (ör. `HTTPException`, `pydantic`)  
-4. **`requirements.txt`** ile proje bağımlılıklarının dışa aktarılması  
+4. **`requirements.txt`** ile proje bağımlılıklarının dışa aktarılması
+![image](https://github.com/user-attachments/assets/9ccf0c77-d628-45a3-b2b3-3e0a6be40363)
+
 ________________________________________
 ⚙️ 9. Nasıl Çalıştırılır?
 1.	Projeyi kopyalayın:
