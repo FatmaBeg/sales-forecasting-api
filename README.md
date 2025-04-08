@@ -1,5 +1,6 @@
 # sales-forecasting-api
 GELECEĞİ YAZAN KADINLAR SATIŞ TAHMİNİ API PROJESİ (NORTHWİND)
+
 Bu proje, Northwind veritabanındaki sipariş verilerini kullanarak bir Makine Öğrenmesi modeli geliştirmeyi ve bu modeli FAST API aracılığıyla dış sistemlere sunmayı amaçlamaktadır. Tahmin modeli, ürün bazlı geçmiş satış verilerini analiz ederek gelecekteki satış miktarını öngörür.
 ________________________________________
 📌 1.PROJE AMACI
