@@ -54,7 +54,8 @@ Yapılan Adımlar:
 6.	Yeni Özellik: TotalRevenue = quantity * unit_price eklenerek veri zenginleştirildi.
 7.	Bu aşamada elde edilen veya df DataFrame’i, sonraki aşamalarda makine öğrenmesi modeli eğitimi için kullanılmıştır.
 
- 
+ ![image](https://github.com/user-attachments/assets/d0c9d701-3142-4315-b6b1-03ab34fe7b17)
+
 
 Northwind verilerinin veri tabanından çekilmesinin ardından, ham verinin genel yapısını anlamak ve temel dağılımını görmek için bir dizi keşifsel veri analizi (Exploratory Data Analysis, EDA) yaptık. Bu aşamada:
 - En çok satılan ürünleri tespit ederek, ürün satışlarına dair hızlı bir fikir edindik,
@@ -94,7 +95,8 @@ Projede 4 model denenmiştir:
 A.	DECİSİON TREE MODELİ
 a)	Customer Type
 Aşağıdaki görsel, “Customer_Type” (müşterilerin yeni mi eski mi olduğunu) sınıflandırmak üzere eğittiğimiz Decision Tree modelinin yapısını temsil eder. Aşağıdaki diyagram, veri setindeki özelliklere göre nasıl dallanma yaptığını ve her düğümde hangi kararı aldığını göstermektedir.
- 
+ ![image](https://github.com/user-attachments/assets/0f19e4b7-2257-409d-b9d1-1f2cc8907a52)
+
 b)	Sales Category
 Aşağıdaki görsel, satış kategorisi tahmini için Decision Tree modelimizin yapısını gösterir. Aşağıdaki dallanma, hangi özellik değerlerinin hangi şekilde ayrıştırıldığını göstermektedir.
  
