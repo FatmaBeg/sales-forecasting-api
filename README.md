@@ -4,10 +4,13 @@ GELECEĞİ YAZAN KADINLAR SATIŞ TAHMİNİ API PROJESİ (NORTHWİND)
 Bu proje, Northwind veritabanındaki sipariş verilerini kullanarak bir Makine Öğrenmesi modeli geliştirmeyi ve bu modeli FAST API aracılığıyla dış sistemlere sunmayı amaçlamaktadır. Tahmin modeli, ürün bazlı geçmiş satış verilerini analiz ederek gelecekteki satış miktarını öngörür.
 ________________________________________
 📌 1.PROJE AMACI
+
 Northwind veritabanındaki sipariş verileriyle ürün bazlı satış tahminleri yapan bir makine öğrenmesi modeli eğitilmiştir. Ardından, bu model FastAPI framework'ü üzerinden bir kullanıma sunulmuştur. Böylece dış sistemler, belirli bir ürün için tahmin talebinde bulunarak satış adedi veya satış tutarı gibi değerlerin öngörüsünü alabilir.
 ________________________________________
 📌 2. GÖREV LİSTESİ
+
  A. Veri Tabanı ve Veri İşleme
+ 
 1. **Northwind veritabanı kurulumu** ve bağlantı testi  
 2. Tablo inceleme (Orders, Order_Details, Products, Customers, Categories)  
 3. Pandas ile verilerin çekilmesi ve birleştirilmesi  
@@ -16,6 +19,7 @@ ________________________________________
 6. Özellik mühendisliği (ay bilgisi, ürün fiyatı, müşteri segmentasyonu vb.)
 
 B. Makine Öğrenmesi Modeli
+
 1. Hedef değişken: (örnek: *ürün bazlı satış miktarı*)  
 2. Eğitim ve test verisinin hazırlanması (`train_test_split`)  
 3. Model seçimi (örnek: DecisionTreeRegressor)  
@@ -25,6 +29,7 @@ B. Makine Öğrenmesi Modeli
 
 
 C. API Geliştirme
+
 1. **FastAPI** ile temel yapı kurulumu  
 2. Endpoint’ler:
    | Endpoint         | Method | Açıklama                                |
@@ -34,7 +39,9 @@ C. API Geliştirme
    | `/retrain’			| POST	| Modeli yeniden eğitir (opsiyonel)	|
    | `/sales_summary’	| GET	| Satış özet verisini döner		|
 ________________________________________
+
 🧠3. KULLANILAN TEKNOLOJİLER
+
 •	Python 3.x: Proje dili
 •	FastAPI & Pydantic: API geliştirme ve veri doğrulama
 •	pandas, numpy: Veri işleme kütüphaneleri
@@ -44,7 +51,9 @@ ________________________________________
 •	datetime, random: Python standard library (zaman ve rastgelelik)
 •	PostgreSQL: Veri tabanı 
 ________________________________________
+
 🧠4. VERİ TABANI BAĞLANTISI VE TEMEL VERİ İŞLEME
+
 Projede, **psycopg2** sürücüsüyle **PostgreSQL** veritabanına bağlanmak için **SQLAlchemy** kütüphanesi kullanılmıştır. Aşağıdaki kod örneği, Northwind veritabanındaki tablolardan veri çekilmesini ve temel veri hazırlama adımlarını gösterir:
 Yapılan Adımlar:
 1.	Tabloları Okuma: orders, order_details, products, categories, customers tabloları ayrı ayrı çekildi ve head() ile gözlemlendi.
