@@ -43,12 +43,19 @@ ________________________________________
 🧠3. KULLANILAN TEKNOLOJİLER
 
 •	Python 3.x: Proje dili 
+
 •	FastAPI & Pydantic: API geliştirme ve veri doğrulama 
+
 •	pandas, numpy: Veri işleme kütüphaneleri 
+
 •	scikit-learn (DecisionTreeRegressor, train_test_split, metrics): Makine Öğrenmesi 
+
 •	joblib: Model serileştirme (kaydetme/yükleme) 
+
 •	dataclasses, typing: Python standard library (tip güvenliği ve data class'lar) 
+
 •	datetime, random: Python standard library (zaman ve rastgelelik) 
+
 •	PostgreSQL: Veri tabanı  
 ________________________________________
 
