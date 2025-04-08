@@ -221,16 +221,21 @@ ________________________________________
 
 Projede, FastAPI'nin HTTPException sınıfı kullanılarak hata yönetimi sağlanır. Böylece API uç noktalarında bir hata oluştuğunda, kullanıcıya anlamlı ve HTTP standartlarına uygun yanıt döndürülür.
 1.	Prediction Hatası (500)
+   
 	except Exception as e:
     raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
 
 Bu blok, /predict gibi uç noktalarda tahmin işlemi sırasında beklenmeyen bir hata olduğunda tetiklenir.
+
 2.	Model Eğitimi Hatası (500)
+   
 except Exception as e:
     raise HTTPException(status_code=500, detail=f"Model eğitimi sırasında hata oluştu: {str(e)}")
 
 Model eğitimi ya da yeniden eğitme (retrain) süreci sırasında bir hata meydana geldiğinde kullanılır.
+
 3.	Veri Bulunamadı (404)
+   
 if df_sales.empty:
     raise HTTPException(status_code=404, detail="No sales data found.")
 
