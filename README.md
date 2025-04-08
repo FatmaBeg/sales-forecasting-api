@@ -169,7 +169,7 @@ ________________________________________
 ________________________________________
 ⚙️ 9. Nasıl Çalıştırılır?
 1.	Projeyi kopyalayın:
-git clone https://github.com/pair12/northwind-sales-api.git (her pair üyesinin kendi github hesabı)
+git clone [https://github.comsales_forecasting_api](https://github.com/FatmaBeg/sales-forecasting-api/tree/main/sales_forecasting_api)
 2.	Gerekli kütüphaneleri yükleyin:
 pip install -r requirements.txt
 3.	API'yi başlatın:
