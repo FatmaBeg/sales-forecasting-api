@@ -112,21 +112,28 @@ Projede 4 model denenmiştir:
 
 
 A.	DECİSİON TREE MODELİ
+
 a)	Customer Type
+
 Aşağıdaki görsel, “Customer_Type” (müşterilerin yeni mi eski mi olduğunu) sınıflandırmak üzere eğittiğimiz Decision Tree modelinin yapısını temsil eder. Aşağıdaki diyagram, veri setindeki özelliklere göre nasıl dallanma yaptığını ve her düğümde hangi kararı aldığını göstermektedir.
  ![image](https://github.com/user-attachments/assets/b51537be-d48f-4d1d-a104-2e685a57e8bc)
 
 
 b)	Sales Category
+
 Aşağıdaki görsel, satış kategorisi tahmini için Decision Tree modelimizin yapısını gösterir. Aşağıdaki dallanma, hangi özellik değerlerinin hangi şekilde ayrıştırıldığını göstermektedir.
+
 ![image](https://github.com/user-attachments/assets/c7d18b84-8389-44dc-858e-e00620aaeea1) 
+
 Sales Category’nin karar ağacı metrikleri aşağıdaki resimde sunulmuştur.
  
 ![image](https://github.com/user-attachments/assets/5204bee1-2bc6-46f2-9882-fa6ca5794c92)
 
 
 B.	RANDOM FOREST MODELİ
+
 a)	Customer Type
+
 Bu grafikte, Random Forest modelimizin her bir özelliğe (feature) ne kadar önem atadığını görebilirsiniz. Feature Importance değeri yüksek olan özellik, modelin tahmin sürecinde daha belirleyici bir rol oynar.
 Aşağıdaki görselde:
 1.	‘year’ modeldeki en önemli özellik olarak öne çıkıyor.
@@ -138,8 +145,11 @@ Aşağıdaki görselde:
 
 
 Bu projede iki aşamalı bir eğitim süreci bulunmaktadır:
+
 İlk Eğitim: Başlangıçta elimizdeki Northwind veritabanı üzerinden veriler çekilerek bir makine öğrenmesi modeli (DecisionTreeRegressor) eğitilir. Model dosyası (sales_model.pkl) olarak kaydedilir.
+
 Postman'dan Veri Alarak Yeniden Eğitim: Daha sonra, yeni veriler Postman üzerinden API'ye (/retrain) gönderildiğinde, bu veriler kaydedilip retrain endpoint'iyle model yeniden eğitilir. Böylece model güncel verilerle sürekli öğrenmiş olur.
+
 POST /retrain: Biriktirilen veya anlık gelen veriyi kullanarak modeli yeniden eğitir ve güncellenmiş *.pkl dosyasını oluşturur.
 1.	model.fit komutuyla model ilk defa eğitilir ve sales_model.pkl oluşturulur.
 2.	Postman'dan /predict çağrıları yapılır
